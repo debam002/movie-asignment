@@ -11,12 +11,12 @@ function Movie() {
             {
                components?.map((it, i) => {
                     return (
-                        <div style={{ display: "flex" }}>
+                        <div className= 'dd' style={{ display:'flex' }}>
                             {
                                 orderBy(it.items,'releaseDate').map((list,j) =>
                                 
-                                    <div >
-                                        <img style={{ padding: "10px" }} src={list.imageUrl} height="400px" width="250px" alt="" />
+                                    <div  >
+                                        <img style={{padding:'10px'}} src={list.imageUrl} height="400px" width="240px" alt="" />
                                         
                                         <h2>{j+1}</h2>
                     

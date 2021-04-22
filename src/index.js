@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Movie from './Movie';
-// import App from './App';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { createStore } from 'redux';
+import allReducers from './redux/reducers/Combine';
+import {Provider} from 'react-redux'
 
+const movieStore = createStore(allReducers ,  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={movieStore}>
+    <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-ReactDOM.render(<Movie/>, document.getElementById('root'));
+reportWebVitals();
