@@ -2,7 +2,6 @@ import React,{useState} from 'react';
 import {orderBy} from "lodash";
 import data from './movies.json'
 import { useDispatch, useSelector } from 'react-redux';
-import { increment , decrement } from '../../redux/actions/actions';
 
 
 function Movie() {
